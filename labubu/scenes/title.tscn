@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bbddoe4exr18e"]
+
+[ext_resource type="Texture2D" uid="uid://bgo8cg25y0ppl" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/grassHalfLeft.png" id="1_4ignj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ignj"]
+size = Vector2(978, 52)
+
+[node name="title" type="Node2D" unique_id=586383709]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1274209394]
+position = Vector2(96, 37)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1531627776]
+position = Vector2(524, 413)
+shape = SubResource("RectangleShape2D_4ignj")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=765479933]
+position = Vector2(490.00006, 429.00006)
+scale = Vector2(15.171429, 1.0857143)
+texture = ExtResource("1_4ignj")
