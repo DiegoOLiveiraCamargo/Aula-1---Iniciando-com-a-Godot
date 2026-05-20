@@ -1,7 +1,26 @@
 [gd_scene format=3 uid="uid://cqtkei1p5amk6"]
 
 [ext_resource type="Script" uid="uid://r0sodam3yp76" path="res://scripts/character_body_2d.gd" id="1_g2brh"]
-[ext_resource type="Texture2D" uid="uid://ue05hapxf16s" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk01.png" id="2_dn4c7"]
+[ext_resource type="Texture2D" uid="uid://dm06kmo6t1ewi" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_stand.png" id="2_4vejd"]
+[ext_resource type="Texture2D" uid="uid://d1kahxmbo1jmr" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_jump.png" id="2_g2brh"]
+[ext_resource type="Texture2D" uid="uid://b5q0f66ttwjg7" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_front.png" id="3_ws0vm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dn4c7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ws0vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4vejd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g2brh")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 20.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4vejd"]
 radius = 22.0
@@ -10,11 +29,15 @@ height = 66.0
 [node name="player" type="CharacterBody2D" unique_id=229878010]
 script = ExtResource("1_g2brh")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=686847625]
-texture = ExtResource("2_dn4c7")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1217837115]
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=270866762]
+position = Vector2(10, 1)
+sprite_frames = SubResource("SpriteFrames_dn4c7")
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1583996323]
-position = Vector2(2, 4)
+position = Vector2(8, 5)
 shape = SubResource("CapsuleShape2D_4vejd")

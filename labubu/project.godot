@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="labubu"
-run/main_scene="uid://cqtkei1p5amk6"
+run/main_scene="uid://2rjwk8jpfv28"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
