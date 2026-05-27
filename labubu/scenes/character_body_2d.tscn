@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqtkei1p5amk6"]
 
 [ext_resource type="Script" uid="uid://r0sodam3yp76" path="res://scripts/character_body_2d.gd" id="1_g2brh"]
+[ext_resource type="Texture2D" uid="uid://b5q0f66ttwjg7" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_front.png" id="2_42hdn"]
 [ext_resource type="Texture2D" uid="uid://d1kahxmbo1jmr" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_jump.png" id="2_g2brh"]
 [ext_resource type="Texture2D" uid="uid://ue05hapxf16s" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk01.png" id="3_x5gf8"]
 [ext_resource type="Texture2D" uid="uid://f1mr6ghcgo6y" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk02.png" id="4_42hdn"]
@@ -16,6 +17,14 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dn4c7"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_42hdn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_g2brh")
@@ -77,7 +86,7 @@ position_smoothing_enabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=270866762]
 position = Vector2(10, 1)
 sprite_frames = SubResource("SpriteFrames_dn4c7")
-animation = &"walk"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1583996323]
 position = Vector2(12, 4)
