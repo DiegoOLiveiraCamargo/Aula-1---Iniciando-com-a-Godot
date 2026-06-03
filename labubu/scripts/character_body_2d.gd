@@ -3,8 +3,14 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+var vida: int = 3
+var posicao: Vector2 = Vector2(500,-1000)
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready() -> void:
+	print("Player criado!")
+	print("O jogador tem " + str(vida) + " vidas.")
+	position = posicao
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
